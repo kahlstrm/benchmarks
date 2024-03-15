@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/sh -e
 echo "Very cool language benchmark script"
 echo "---"
-echo "Node.js"
+echo "Node.js $(node -v)"
 node perf.js
 echo "---"
-echo "Lua (LuaJIT)"
+echo "Lua (LuaJIT) $(luajit -v | awk '{print $1, $2}')"
 luajit perf.lua
 echo "---"
 echo "Rust"
@@ -12,26 +12,26 @@ cd perfrustsrc
 cargo run -q --release
 cd ..
 echo "---"
-echo "Go"
+echo "Go $(go version | awk '{print $3, $4}')"
 go run perf.go
 echo "---"
-echo "Python (PyPy)"
+echo "Python (PyPy) $(pypy --version)"
 pypy perf.py
 echo "---"
-echo "C (GCC)"
+echo "C (GCC) $(gcc --version | head -n 1)"
 gcc perf.c -Ofast -march=native -mtune=native -o perfc
 ./perfc
 echo "---"
-echo "C++ (G++)"
+echo "C++ (G++) $(g++ --version | head -n 1)"
 g++ perf.cpp -std=c++11 -march=native -mtune=native -Ofast -o perfcpp
 ./perfcpp
 echo "---"
-echo "C#"
+echo "C# $(dotnet --version)"
 cd perfcsharpsrc
 dotnet run --configuration Release --verbosity quiet
 cd ..
 echo "---"
-echo "Java"
+echo "Java $(java -version 2>&1 | head -n 1)"
 javac perf.java
 java perf
 echo "---"
