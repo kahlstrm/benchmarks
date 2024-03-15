@@ -25,7 +25,7 @@ jobs:
       - name: Setup PyPy
         uses: actions/setup-python@v2
         with:
-          python-version: pypy2
+          python-version: pypy3.10
 
       - name: Run benchmarks
         run: node bench.js

@@ -15,8 +15,8 @@ echo "---"
 echo "Go $(go version | awk '{print $3, $4}')"
 go run perf.go
 echo "---"
-echo "Python (PyPy) $(pypy --version)"
-pypy perf.py
+echo "Python (PyPy3) $(pypy3 --version)"
+pypy3 perf.py
 echo "---"
 echo "C (GCC) $(gcc --version | head -n 1)"
 gcc perf.c -Ofast -march=native -mtune=native -o perfc

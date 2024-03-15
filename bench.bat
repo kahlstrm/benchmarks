@@ -15,7 +15,7 @@ echo ---
 echo Go
 go run perf.go
 echo ---
-echo Python (PyPy)
+echo Python (PyPy3)
 pypy3 perf.py
 echo ---
 echo C (GCC)

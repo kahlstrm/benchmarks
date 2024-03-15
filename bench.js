@@ -12,8 +12,8 @@ const benchmarks = [
         perf: "node perf.js"
     },
     {
-        name: "Python (PyPy)",
-        perf: "pypy perf.py"
+        name: "Python (PyPy3)",
+        perf: "pypy3 perf.py"
     },
     {
         name: "Lua (LuaJIT)",

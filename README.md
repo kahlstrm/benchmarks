@@ -39,7 +39,7 @@ Benchmark results of GitHub Actions runner. Smaller is better.
 - [Java JDK](https://adoptopenjdk.net/)
 - [Rust/Cargo](https://www.rust-lang.org/tools/install)
 - [Go](https://golang.org/doc/install)
-- [PyPy](https://www.pypy.org/download.html)
+- [PyPy3](https://www.pypy.org/download.html)
 - [LuaJIT](https://luajit.org/download.html)
 - GCC ([MinGW](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download) on Windows\*)
 - [Node.js](https://nodejs.org/en/download/)
