@@ -43,7 +43,7 @@ Benchmark results of GitHub Actions runner. Smaller is better.
 - [LuaJIT](https://luajit.org/download.html)
 - GCC ([MinGW](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download) on Windows\*)
 - [Node.js](https://nodejs.org/en/download/)
-- [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 
 Each program needs to be added to PATH if the associated installer or package doesn't do so automatically.
 
