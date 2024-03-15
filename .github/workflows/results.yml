@@ -1,5 +1,6 @@
 name: Run benchmarks
 on:
+  pull_request:
   workflow_dispatch:
   push:
     paths-ignore:
@@ -17,13 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install LuaJIT
         run: sudo apt-get install -y luajit
       
       - name: Setup PyPy
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: pypy3.10
 
@@ -31,6 +32,7 @@ jobs:
         run: node bench.js
 
       - name: Commit new results
+        if: github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch'
         uses: EndBug/add-and-commit@v7
         with:
           add: README.md
