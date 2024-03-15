@@ -17,3 +17,4 @@ perfcsharpsrc/obj
 # Rust build files
 perfrustsrc/Cargo.lock
 perfrustsrc/target
+perfrs

@@ -7,10 +7,9 @@ echo "---"
 echo "Lua (LuaJIT) $(luajit -v | awk '{print $1, $2}')"
 luajit perf.lua
 echo "---"
-echo "Rust"
-cd perfrustsrc
-cargo run -q --release
-cd ..
+echo "Rust $(rustc --version)"
+rustc perf.rs -C opt-level=3 -C codegen-units=1 -C lto=true -C target-cpu=native -o perfrs
+./perfrs
 echo "---"
 echo "Go $(go version | awk '{print $3, $4}')"
 go run perf.go

@@ -8,9 +8,8 @@ echo Lua (LuaJIT)
 luajit perf.lua
 echo ---
 echo Rust
-cd perfrustsrc
-cargo run -q --release
-cd ..
+rustc perf.rs -C opt-level=3 -C codegen-units=1 -C lto=true -C target-cpu=native -o perfrs.exe
+perfrs.exe
 echo ---
 echo Go
 go run perf.go

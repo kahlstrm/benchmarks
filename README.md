@@ -37,7 +37,7 @@ Benchmark results of GitHub Actions runner. Smaller is better.
 ## Dependencies
 
 - [Java JDK](https://adoptopenjdk.net/)
-- [Rust/Cargo](https://www.rust-lang.org/tools/install)
+- [Rust](https://www.rust-lang.org/tools/install)
 - [Go](https://golang.org/doc/install)
 - [PyPy3](https://www.pypy.org/download.html)
 - [LuaJIT](https://luajit.org/download.html)

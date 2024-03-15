@@ -21,8 +21,8 @@ const benchmarks = [
     },
     {
         name: "Rust",
-        perf: "cargo run -q --release",
-        cwd: "./perfrustsrc/"
+        build: "rustc perf.rs -C opt-level=3 -C codegen-units=1 -C lto=true -C target-cpu=native -o perfrs",
+        perf: "./perfrs",
     },
     {
         name: "Go",

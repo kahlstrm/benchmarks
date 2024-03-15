@@ -1,4 +1,4 @@
-use time::Instant;
+use std::time::Instant;
 fn main() {
     let start = Instant::now();
     let mut n = 0_u32;
@@ -10,5 +10,9 @@ fn main() {
         }
     }
     println!("{}", n);
-    println!("{}.{}s", start.elapsed().whole_seconds(), start.elapsed().subsec_milliseconds());
+    println!(
+        "{}.{}s",
+        start.elapsed().as_secs(),
+        start.elapsed().subsec_millis()
+    );
 }
