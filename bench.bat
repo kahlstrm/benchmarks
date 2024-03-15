@@ -23,7 +23,7 @@ gcc perf.c -march=native -mtune=native -Ofast -o perfc.exe
 perfc.exe
 echo ---
 echo C++ (G++)
-g++ perf.cpp -march=native -mtune=native -Ofast -o perfcpp.exe
+g++ perf.cpp -std=c++11 -march=native -mtune=native -Ofast -o perfcpp.exe
 perfcpp.exe
 echo ---
 echo C#

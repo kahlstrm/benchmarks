@@ -35,7 +35,7 @@ const benchmarks = [
     },
     {
         name: "C++ (G++)",
-        build: "g++ perf.cpp -march=native -mtune=native -Ofast -o perfcpp",
+        build: "g++ perf.cpp -std=c++11 -march=native -mtune=native -Ofast -o perfcpp",
         perf: "./perfcpp"
     },
     {
